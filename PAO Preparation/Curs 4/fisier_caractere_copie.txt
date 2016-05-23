@@ -1,0 +1,4 @@
+Acesta este fisierul
+pentru caractere.
+Se va incerca o copiere a lui 
+cu ajutorul fluxurilor de caractere.
