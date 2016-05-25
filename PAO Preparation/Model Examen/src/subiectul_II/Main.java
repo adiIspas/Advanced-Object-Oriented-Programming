@@ -21,16 +21,10 @@ public class Main {
        Ruleaza t3 = new Ruleaza(P,"exemplu_3.txt");
        
        t1.start();
+       t1.join();
        t2.start();
+       t2.join();
        t3.start();
-       
-       try {
-         t1.join();
-         t2.join();
-         t3.join();
-        } 
-        catch( Exception e) {
-               System.out.println("Interrupted");
-        }
+       t3.join();
     }
 }

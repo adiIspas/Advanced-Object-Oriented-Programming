@@ -30,9 +30,9 @@ public class Ruleaza extends Thread {
     @Override
     public void run() {
         try {
-            synchronized(P){
+           // synchronized(P){
                 P.Print(this.fisier);
-            }
+           // }
         } catch (IOException ex) {
             Logger.getLogger(Ruleaza.class.getName()).log(Level.SEVERE, null, ex);
         }
