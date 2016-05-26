@@ -16,8 +16,8 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
 /**
- *
- * @author NOI25
+ * Curs 11
+ * @author Adrian ISPAS
  */
 @WebServlet(name = "Translator", urlPatterns = {"/Traducere"})
 public class Traducere extends HttpServlet {
