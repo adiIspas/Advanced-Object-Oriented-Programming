@@ -12,30 +12,20 @@ import thread.*;
  * @author Adrian ISPAS
  */
 public class Main {
-    public static void main(String[] args){
+    public static void main(String[] args) throws InterruptedException{
         
-        int valoare_maxima = 1000;
+        int valoare_maxima = 10;
         Afiseaza P = new Afiseaza();
         
         FirDeExecutareT fir1 = new FirDeExecutareT(valoare_maxima,'T',P);
         FirDeExecutareT fir2 = new FirDeExecutareT(valoare_maxima,'B',P);
+        FirDeExecutareT fir3 = new FirDeExecutareT(valoare_maxima,'C',P);
         
         fir1.start();
+        fir1.join();
         fir2.start();
-        
-        try {
-         fir1.join();
-         fir2.join();
-        } 
-        catch( Exception e) {
-               System.out.println("Interrupted");
-        }
-        
-        for(int i = 0; i < valoare_maxima; i++){
-            System.out.print("M ");
-            if(i % 100 == 0)
-                System.out.println();
-        }
-        
+        fir2.join();
+        fir3.start();
+        fir3.join();
     }
 }
